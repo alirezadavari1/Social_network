@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبکه‌های اجتماعی من</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #000; /* پس‌زمینه مشکی */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+        .social-link {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            direction: rtl;
+        }
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .bg-gradient-telegram { background: linear-gradient(to left, #0088cc, #33aaff); }
+        .bg-gradient-github { background: linear-gradient(to left, #333, #666); }
+        .bg-gradient-whatsapp { background: linear-gradient(to left, #25D366, #34B7F1); }
+        .bg-gradient-twitter { background: linear-gradient(to left, #1DA1F2, #4DC9FF); }
+        .bg-gradient-email { background: linear-gradient(to left, #BB001B, #CC3300); }
+
+        /* استایل کانواس برای دایره‌ها */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- کانواس برای دایره‌ها -->
+    <div id="particles-js"></div>
+
+    <div style="border: 1px solid #424242;" class="content  rounded-xl shadow-xl p-6 w-full max-w-sm mx-auto">
+        <div class="text-center mb-6">
+            <img src="1.jpg" alt="عکس پروفایل" class="rounded-full mx-auto mb-4 w-24 h-24 object-cover border-2 border-gray-600">
+            <h1 class="text-3xl font-bold text-white">علی رضا داوری</h1>
+            <p class="text-white mt-1">از طریق شبکه های اجتماعی با من  در تماس باشید</p>
+        </div>
+
+        <div class="space-y-4">
+            <a href="https://t.me/alirezadavari1386" target="_blank" class="social-link flex items-center p-4 rounded-lg shadow-md bg-gradient-telegram text-white hover:shadow-lg">
+                <i class="fab fa-telegram-plane text-2xl ml-4"></i>
+                <span class="text-lg font-semibold">تلگرام</span>
+                <i class="fas fa-chevron-left mr-auto text-xl"></i>
+            </a>
+
+            <a href="https://github.com/alirezadavari1" target="_blank" class="social-link flex items-center p-4 rounded-lg shadow-md bg-gradient-github text-white hover:shadow-lg">
+                <i class="fab fa-github text-2xl ml-4"></i>
+                <span class="text-lg font-semibold">گیت‌هاب</span>
+                <i class="fas fa-chevron-left mr-auto text-xl"></i>
+            </a>
+
+            <a href="https://wa.me/message/F7VINL7RNQDVM1" target="_blank" class="social-link flex items-center p-4 rounded-lg shadow-md bg-gradient-whatsapp text-white hover:shadow-lg">
+                <i class="fab fa-whatsapp text-2xl ml-4"></i>
+                <span class="text-lg font-semibold">واتساپ</span>
+                <i class="fas fa-chevron-left mr-auto text-xl"></i>
+            </a>
+
+            <a href="https://x.com/alirezadavari20" target="_blank" class="social-link flex items-center p-4 rounded-lg shadow-md bg-gradient-twitter text-white hover:shadow-lg">
+                <svg class="w-6 h-6 ml-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span class="text-lg font-semibold">توییتر (X)</span>
+                <i class="fas fa-chevron-left mr-auto text-xl"></i>
+            </a>
+            
+            <a href="mailto:alireza.davari1425@gmail.com" class="social-link flex items-center p-4 rounded-lg shadow-md bg-gradient-email text-white hover:shadow-lg">
+                <i class="fas fa-envelope text-2xl ml-4"></i>
+                <span class="text-lg font-semibold">ایمیل</span>
+                <i class="fas fa-chevron-left mr-auto text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- اسکریپت particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // تنظیمات particles.js
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 350,  // تعداد دایره‌ها
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"  // رنگ دایره‌ها (سفید)
+                    },
+                    "shape": {
+                        "type": "circle",  // شکل دایره
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,  // شفافیت
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 4,  // اندازه دایره‌ها (1 پیکسل)
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false  // خطوط بین نقاط غیرفعال
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 0.7,  // سرعت حرکت
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"  // حالت فرار از موس
+                        },
+                        "onclick": {
+                            "enable": false
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "repulse": {
+                            "distance": 50,  // فاصله فرار از موس
+                            "duration": 0.4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+</body>
+</html>
